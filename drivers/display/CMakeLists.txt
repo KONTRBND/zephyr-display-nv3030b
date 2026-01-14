@@ -1,0 +1,3 @@
+zephyr_library()
+
+zephyr_library_sources_ifdef(CONFIG_DISPLAY_NV3030B display_nv3030b.c)

@@ -1,0 +1,38 @@
+description: Novatek NV3030B display controller
+
+compatible: "novatek,nv3030b"
+
+include: [spi-device.yaml, display-controller.yaml]
+
+properties:
+  dc-gpios:
+    type: phandle-array
+    required: true
+    description: DC pin.
+    
+      The DC pin of NV3030B is active high.
+      If connected directly the MCU pin should be configured as active high.
+
+  reset-gpios:
+    type: phandle-array
+    required: true
+    description: RESET pin.
+
+      The RESET pin of NV3030B is active low.
+      If connected directly the MCU pin should be configured as active low.
+
+  bl-gpios:
+    type: phandle-array
+    required: true
+    description: BL pin.
+
+      The BL pin of the NV3030B is active high.
+      If connected directly the MCU pin should be configured as active high.
+
+  panel-offset:
+    type: int
+    required: false
+    default: 0
+    description: Panel offset.
+
+      The vertical offset in pixel.

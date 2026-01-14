@@ -1,0 +1,7 @@
+config DISPLAY_NV3030B
+    bool "NV3030B LCD controller"
+    depends on SPI && DISPLAY
+    help
+      Enable driver support for NV3030B-based SPI LCD panels.
+    select DISPLAY_HAS_DRIVER
+    default y if DT_HAS_NOVATEK_NV3030B_ENABLED

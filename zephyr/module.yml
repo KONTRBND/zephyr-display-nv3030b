@@ -1,0 +1,6 @@
+name: zephyr-display-nv3030b
+build:
+  cmake: .
+  kconfig: Kconfig
+  settings:
+    dts_root: .
